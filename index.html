@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>사용자 정보</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- ✅ Firebase SDK 추가 -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+
+  <!-- ✅ Firebase 초기화 -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAXZKdkx72F2GvM7qaynr5r9agAMAiVX2s",
+      authDomain: "commonpjt-fd9ed.firebaseapp.com",
+      databaseURL: "https://commonpjt-fd9ed-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "commonpjt-fd9ed",
+      storageBucket: "commonpjt-fd9ed.firebasestorage.app",
+      messagingSenderId: "653463134970",
+      appId: "1:653463134970:web:8301b6f3a2bde8da201f43"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div class="page-container">
+    <h1 class="main-title">사용자 정보</h1>
+    <div class="user-info-container">
+      <h2>정보를 불러오는 중...</h2>
+      <div class="user-info-card"></div>
+    </div>
+    <div class="sensor-info-container">
+      <div class="sensor-info-card"></div>
+    </div>
+  </div>
+
+  <!-- ✅ Firebase 초기화보다 뒤에 script.js 로드 -->
+  <script src="script.js"></script>
+</body>
+</html>
